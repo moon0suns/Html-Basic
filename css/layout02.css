@@ -1,0 +1,207 @@
+h1.tit {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 가운데로 박스옮기기 */
+    border: 1px solid #000;
+    background: yellow;
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+/* .case01 { */
+/* overflow: hidden; */
+/* 플롯(늘어나는것)을 가라앉힘 but 잘안쓰는방법 ; flex에서 더쓰임 */
+/* } */
+
+/* clear fix -float에만 쓰임 -부모요소의 높이(박스)인식 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 부모요소 아래 자식박스 가로배치 */
+.case01>div {
+    float: left;
+}
+
+.case02>div {
+    float: right;
+    /* 순서가 거꾸로됨 */
+}
+
+.case03 {
+    text-align: center;
+    font-size: 0;
+    /* 중간 박스 붙이는 방법 그리고 font size 16줘야함 */
+}
+
+.case03>div {
+    display: inline-block;
+    /* 글자에 성격을 가지게함 띄우기 ;센터가능 */
+    font-size: 16px;
+}
+
+/* 양끝배치 */
+.case04 .left {
+    float: left;
+}
+
+.case04 .right {
+    float: right;
+}
+
+.stitle {
+    text-align: left;
+    width: 1200px;
+    margin: 50px auto 20px auto;
+}
+
+.stitle i {
+    float: right;
+    /* 플롯자체가 부유함 뜬다 그래서 clearfix나 글자 작게 함 */
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border-radius: 50%;
+    /* 동그라미만들기 */
+    font-size: 10px;
+}
+
+
+.top_bar {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    line-height: 30px;
+}
+
+.top_bar .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.top_bar .inner .slogan {
+    float: left;
+}
+
+.top_bar .inner .customer {
+    float: right;
+
+}
+
+.top_bar .inner .customer li {
+    float: left;
+    padding: 0 10px;
+    border-right: 1px solid #ddd;
+
+}
+
+#header {
+    /* 헤더에는 백그라운드 X why?로고를건드려서 ; 실습 보이게하기위해 */
+    background: #f9f9f9;
+}
+
+#header .inner {
+    width: 1200px;
+    margin: 0 auto;
+    line-height: 100px;
+    /* 상속받아서 후손으로 내려감 박스가 주르륵 */
+}
+
+#header h1 {
+    float: left;
+}
+
+#header .service {
+    float: right;
+}
+
+/* 서비스 아래에 있는 자식들 모두 잡는다 */
+#header .service .gnb {
+    float: left;
+}
+
+#header .service .gnb>ul>li {
+    position: relative;
+    float: left;
+}
+
+#header .service .gnb>ul>li>a {
+    display: block;
+    /* a라인 박스만들기 */
+    padding: 0 20px;
+}
+
+#header .service .gnb>ul>li~li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+#header .service .right {
+    float: left;
+    margin: 0 0 0 30px;
+}
+
+/* 플롯은 gap X ; margin or padding으로 메뉴사이 띄워야함 */
+
+#event {
+    padding: 100px 0;
+}
+
+#event h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+#event .inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#event .inner figure {
+    float: left;
+    width: 33.333333333%;
+    padding: 0 15px;
+    /* 사이 띄우기 ; 양쪽 15씩 들어가서 1200-30 =1170*/
+}
+
+#event .inner figure img {
+    width: 100%;
+    height: 370px;
+    /* 특별한 경우 아님 높이 안씀 */
+    object-fit: cover;
+}

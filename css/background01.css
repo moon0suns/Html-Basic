@@ -1,0 +1,49 @@
+body {
+    height: 200vh;
+}
+
+
+img {
+    max-width: 100%;
+    /* 1. 바깥쪽 100%채워라! 이미지화면안에 꽉채우는거 스크롤x */
+}
+
+.bg00 {
+    height: 400px;
+    background: url(../imges/mainvisual03.jpg) no-repeat fixed center center/cover;
+    /* .bg03내용들 축약형이다 */
+}
+
+.bg01 {
+    height: 500px;
+    background-image: url(../imges/grafflogo.png);
+    /* background-repeat: repeat-x; */
+    /* x축 반복안한다. */
+    background-repeat: no-repeat;
+    /* background-position: 100px 100px; */
+    /* ex 아이콘을 위치시킬때 :right bottom = 로고위치가 오른쪽아래로 붙는다.
+        px은 위치 조정함 ; 앞이 X축 뒤 y축 */
+    background-position: center center;
+
+}
+
+.bg02 {
+    height: 400px;
+    background-image: url(../imges/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* 이미지 겹쳐서 스크롤내려지는것 */
+}
+
+.bg03 {
+    filter: grayscale(1);
+    /* 스크롤내릴때흑백효과 */
+    height: 400px;
+    background-image: url(../imges/mainvisual01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}

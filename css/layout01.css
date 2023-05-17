@@ -1,4 +1,4 @@
-h1 {
+h1.tit {
     margin: 50px;
     font-size: 30px;
     font-weight: 700;
@@ -53,6 +53,14 @@ h2 {
 .case03 .right2 {
     margin: 0 0 0 100px;
     /* gap을 안쓰고 띄우는법 고급스킬 */
+}
+
+.case04 {
+    display: flex;
+    justify-content: center;
+    /* flex end 오른쪽 붙기 center중간 등 좌우로 움직임 조절 */
+    gap: 30px;
+
 }
 
 .top_bar {
@@ -138,4 +146,42 @@ h2 {
     width: 1px;
     height: 12px;
     background: #ddd;
+}
+
+#event {
+    padding: 100px 0;
+}
+
+#event h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+#event p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+#event .inner {
+    display: flex;
+    gap: 30px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+#event .inner figure {
+    flex: 1;
+    /* 사이즈 안주고 한칸씩 차지하는 것 */
+}
+
+#event .inner figure img {
+    width: 100%;
+    height: 370px;
+    /* 특별한 경우 아님 높이 안씀 */
+    object-fit: cover;
 }
