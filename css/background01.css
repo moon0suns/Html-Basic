@@ -10,13 +10,13 @@ img {
 
 .bg00 {
     height: 400px;
-    background: url(../imges/mainvisual03.jpg) no-repeat fixed center center/cover;
+    background: url(../images/mainvisual03.jpg) no-repeat fixed center center/cover;
     /* .bg03내용들 축약형이다 */
 }
 
 .bg01 {
     height: 500px;
-    background-image: url(../imges/grafflogo.png);
+    background-image: url(../images/grafflogo.png);
     /* background-repeat: repeat-x; */
     /* x축 반복안한다. */
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@ img {
 
 .bg02 {
     height: 400px;
-    background-image: url(../imges/mainvisual01.jpg);
+    background-image: url(../images/mainvisual01.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -41,7 +41,7 @@ img {
     filter: grayscale(1);
     /* 스크롤내릴때흑백효과 */
     height: 400px;
-    background-image: url(../imges/mainvisual01.jpg);
+    background-image: url(../images/mainvisual01.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

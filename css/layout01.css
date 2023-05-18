@@ -128,7 +128,7 @@ h2 {
 /* 부를때 공식 : 헤더아래gnb 자식ul */
 #header .gnb>ul {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
 /* 2.메뉴 막대바 부모요소에 기준잡음 */

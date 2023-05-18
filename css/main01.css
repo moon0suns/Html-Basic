@@ -6,26 +6,26 @@
 
 /* 2 백그라운드 url로 이미지 주기 */
 #mainVisual .itm01 {
-    background: url(../imges/mainvisual01.jpg) no-repeat center center/cover;
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
 }
 
 #mainVisual .itm02 {
-    background: url(../imges/mainvisual02.jpg) no-repeat center center/cover;
+    background: url(../images/mainvisual02.jpg) no-repeat center center/cover;
 }
 
 #mainVisual .itm03 {
-    background: url(../imges/mainvisual03.jpg) no-repeat center center/cover;
+    background: url(../images/mainvisual03.jpg) no-repeat center center/cover;
 }
 
 #mainVisual .slick-arrow {
-    /* 외울 공식 */
+    /* 양쪽 옆으로 넘기기 버튼 만들기 */
     position: absolute;
     top: 50%;
     left: 50%;
     z-index: 999;
 
     background: transparent;
-    /* 버튼색깔뺌 */
+    /* 백그라운드 색상 빼기 */
     border: none;
     outline: none;
 
@@ -33,6 +33,7 @@
     width: 100px;
     height: 100px;
     border-left: 1px solid rgba(255, 255, 255, 0.5);
+    /* 반투명 색상 적용하기 */
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
@@ -53,7 +54,7 @@
     transform: translate(-50%, 0);
 }
 
-#mainVisual .slick-dots li {
+#mainVisual .slick-dots>* {
     display: inline-block;
     margin: 0 2px;
 }
