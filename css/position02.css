@@ -1,0 +1,47 @@
+/* 1  */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* ※중앙공식 */
+    width: 1200px;
+    height: 500px;
+    border: 2px solid #333;
+    background: #fff;
+    /* 박스 만들기 */
+}
+
+/* 2. 랩퍼아래 자식들 */
+.wrapper>div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+    /* rotate 돌리는 각도 */
+    width: 50px;
+    height: 50px;
+    border-left: 3px solid #333;
+    border-top: 1px solid #333;
+
+}
+
+/* 3. 마우스올릴때 우는 얼굴 hover(마우스올릴때 */
+.wrapper:hover>div {
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* 3-1 마우스 올릴때 부드럽게 하는거 호버될때 올리면 뒤로가는게 보장X */
+    transition: 0.5s;
+}
+
+/* 2-2. 스마일 위치 시키고 돌리기 */
+.wrapper .eye_left {
+    margin: -100px 0 0 -200px;
+}
+
+.wrapper .eye_right {
+    margin: -100px 0 0 200px;
+}
+
+.wrapper .eye_mouse {
+    margin: 100px 0 0 0;
+}

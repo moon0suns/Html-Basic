@@ -1,0 +1,147 @@
+/* 2-1. */
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 1. 탑배너 위치 */
+.top_banner {
+    position: fixed;
+    /* fixde햇을때 왼쪽좌표에 딱붙어있다. left 오토라서 */
+    top: 0;
+    left: 0;
+    right: 0;
+    /* 꽉채움 width 100% 줄때 배너가 오작동함 스크롤생긴다거나
+    ※ left: 0; right: 0; 이게 낫다*/
+    background: #75675c;
+}
+
+/* 2-6 */
+.top_banner .inner {
+    height: 150px;
+    overflow: hidden;
+    /* 2-7 */
+    transition: 0.5s;
+}
+
+/* 2-5 버튼을 클릭했을때 탑배너에 마우스올렷을때 높이주는거 */
+/* .top_banner.on 동시에 줌 VS.top_banner .on 탑배너 아래 자식요소*/
+.top_banner.on .inner {
+    height: 0;
+}
+
+
+/* 2-3 ※외울공식 버튼 위치 시키기 */
+.top_banner .btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-100%, 100%);
+    /* 2-4박스 만들기 */
+    margin: 0 0 0 600px;
+    background: #75675c;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px;
+}
+
+/* 4 */
+.top_banner .btn::after {
+    content: "위로올려";
+    font-size: 16px;
+
+}
+
+.top_banner.on .btn::after {
+    content: "아래 내려";
+}
+
+/* 3 배너아이콘 올렷다내렷다 바뀌는거 */
+.top_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+/* sidebanner만들때 fix */
+
+/* 5 배너만들기 */
+.right_banner {
+    position: fixed;
+    top: 50%;
+    right: -300px;
+
+    width: 300px;
+    height: 400px;
+    /* 공식 */
+    background: #75675c;
+    transition: 0.5s;
+}
+
+/* 5-3 */
+.right_banner.on {
+    right: 0;
+}
+
+
+/* 5-1 배너 붙이기 */
+.right_banner .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+}
+
+/* 5-4 */
+.right_banner.on .btn i {
+    transform: rotate(180deg);
+}
+
+/* 5-2 배너 버튼 만들기 */
+.right_banner .btn i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* 6-3 */
+.left_banner.on {
+    left: 0;
+}
+
+/* 6 배너만들기 */
+.left_banner {
+    position: fixed;
+    top: 50%;
+    left: -300px;
+
+    width: 300px;
+    height: 400px;
+    /* 공식 */
+    background: #75675c;
+    transition: 0.5s;
+}
+
+
+/* 혼자해본 왼쪽 6-1 배너 붙이기 */
+.left_banner .btn {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    transform: translate(100%, -100%);
+}
+
+/* 6-4 */
+.left_banner.on .btn i {
+    transform: rotate(-180deg);
+}
+
+
+/* 6-2 배너 버튼 만들기 */
+.left_banner .btn i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 20px;
+}

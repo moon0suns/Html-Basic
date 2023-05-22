@@ -1,0 +1,105 @@
+/* 상단메뉴 fix되면서 스크롤되고 색깔 바뀌는 것 */
+
+/* 반짝이는거 없애줌 */
+.slick-track,
+.slick-list {
+    transition-delay: 30ms
+}
+
+/* 1 상단메뉴 고정*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* ★왼오 0잡아서 펴주기 */
+    z-index: 999;
+    /* 펴지고 위로 올라오게함 */
+}
+
+/* 3 - 2번 js에서 기능쓰고오기 */
+#header.on {
+    background: #fff;
+}
+
+/* 3-2 */
+#header.on .inner {
+    transition: 0.5s;
+}
+
+/* 3-1 스크롤 내려갈때 header 변하기 */
+#header.on .inner {
+    height: 100px;
+}
+
+
+/* <다단메뉴만들기> */
+
+/* 4-1 기준잡기 */
+#header .gnb>ul>li {
+    position: relative;
+}
+
+/* 4-4 */
+#header .gnb>ul>li>a {
+    outline: 1px solid tomato;
+    display: block;
+    line-height: 100px;
+}
+
+/* 4-. 다단메뉴 만들기 */
+#header .gnb>ul>li .sub {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    border: 1px solid #ddd;
+    background: #fff;
+    text-align: center;
+    line-height: 40px;
+    /* 5-4 */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+/* 5-3 */
+#header .gnb>ul>li:hover .sub {
+    top: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 5  다단메뉴 가상요소 만들기 */
+#header .gnb>ul>li .sub::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/* 5-1 */
+#header .gnb>ul>li .sub li {
+    position: relative;
+    background: #fff;
+}
+
+/* 5-2 */
+#header .gnb>ul>li .sub li a {
+    display: block;
+}
+
+/* 4-3 */
+#header .gnb>ul>li:hover .sub {
+    top: 90px;
+}
+
+#header .gnb>ul>li .sub li~li {
+    border-top: 1px solid #ddd;
+}

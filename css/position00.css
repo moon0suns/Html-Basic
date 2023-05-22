@@ -1,0 +1,354 @@
+/* 0 기본셋팅 */
+h1.tit {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+/* 1-1 */
+.sec {
+    padding: 100px;
+    background: #f9f9f9;
+
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 가운데로 박스옮기기 */
+    border: 1px solid #000;
+    background: yellow;
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+.case01 {
+    position: relative;
+}
+
+/* ※공식 박스가운데 오기  */
+.case01 .itm {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; ↓서양에서축약형 길때 많이 사용함*/
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+}
+
+.case02 {
+    position: relative;
+}
+
+.case02 .itm {
+    position: absolute;
+    /* top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; ↓축약형 */
+    inset: 0 0 0 0;
+    /* ↓ 요소(글자)를 가운데 오게하기 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case03 {
+    position: relative;
+}
+
+.case03 .itm {
+    position: absolute;
+    /* 가운데오게하고 왼쪽으로 밀어버림 */
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 -600px;
+    /* 1200라인 맞출때 패딩15 -15해서 쓰기 */
+    transform: translate(0, -50%);
+    /* translate(좌우, 상하) */
+}
+
+.case04 {
+    position: relative;
+}
+
+.case04 .itm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translate(-100%, -50%);
+}
+
+/* 실습예시 01 시작 */
+
+/* 1 */
+.event {
+    background: thistle;
+}
+
+/* 1 */
+.event .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 1-2 */
+.event .con {
+    position: relative;
+    /* ★01 카트 이미지 안 배치  */
+    display: flex;
+    gap: 30px;
+    /* ↑ img 가로배치 */
+}
+
+/* 1-3 */
+.event .con figure {
+    position: relative;
+    /* ★02 카트 이미지 안 배치  */
+    flex: 1;
+    /* 한칸씩 차지한다 2하면 6칸 */
+    overflow: hidden;
+    /* 1-5 바깥에 있는 카트를 없애라 */
+}
+
+/* 1-4 */
+.event .con figure .btn {
+    position: absolute;
+    /* ★00 카트 이미지 안 배치  */
+    bottom: -50px;
+    right: 30px;
+    transition: 0.5s;
+}
+
+/* 1-7 아이콘 늘어난거 예쁘게 */
+.event .con figure .btn i {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+/* 1-6 mouse 올라갈때 카드 나옴*/
+.event .con figure:hover .btn {
+    bottom: 30px;
+}
+
+/* 실습예시 02 시작 */
+
+/* 2-1 */
+.content {
+    background: #fff;
+}
+
+/* 2-2 */
+.content .con {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content .con figure {
+    /* 2-3 */
+    position: relative;
+    flex: 1;
+    /* 2-9 */
+    overflow: hidden;
+}
+
+/* 2-4 이미지와 글자 겹치기*/
+.content figure .cover {
+    position: absolute;
+    /* 2-8 */
+    inset: 0 auto auto 100%;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.5;
+    background: rgba(0, 0, 255);
+    ☆ opacity는 박스와 안에 있는 구조물까지 상속되서 모든 요소(글자)투명하게 
+    VS rgba써야지 글자 진하게 박스만 투명하게 됨*/
+
+    /* 2-5 내용과 more 배치*/
+    display: flex;
+    flex-direction: column;
+    /* 아래쪽 방향으로 more  */
+
+    background: rgba(0, 0, 255, 0.8);
+    /* rgba투명해지게하는것 */
+    color: #ffffff;
+    padding: 50px 30px;
+
+    /* 3-1 */
+    transition: 0.5s;
+}
+
+/* 2-6 */
+.content .cover a {
+    background: #333;
+    padding: 5px 10px;
+    margin: auto 0 0 0;
+    /* 2-7 ↓ more버튼 스트래치 안되고 버튼 만들기 */
+    align-self: flex-start;
+}
+
+/* 3 마우스 올라갈때 좌표바뀜*/
+.content figure:hover .cover {
+    inset: 0 auto auto 0;
+}
+
+
+/* 실습예시 03 start */
+
+/* 3-1 */
+.customer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 3-2 */
+.customer .list {
+    /* 3-5 */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* 날짜 가로배치 */
+    align-items: center;
+    height: 100px;
+    padding: 0 30px;
+    background: #fff;
+    margin: 0 0 10px 0;
+}
+
+/* 3-4 list 박스 2개해서 테두리 만들기 */
+.customer .list::before {
+    content: "";
+    /* 3-6 flex되있으니깐 띄우기*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+
+    /* 사각형 만들기 */
+    border-top: 1px solid #0c4ca3;
+    border-left: 1px solid #0c4ca3;
+
+    /* 3-8 */
+    visibility: hidden;
+
+    /* 4-1 */
+    transition: 0.5s;
+}
+
+/* 3-9 */
+.customer .list:hover:before {
+    width: 100%;
+    height: 100%;
+
+    /* 나오게 하기  */
+    visibility: visible;
+}
+
+
+/* 3-7 */
+.customer .list::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+
+    /* 사각형 만들기 */
+    border-bottom: 1px solid #0c4ca3;
+    border-right: 1px solid #0c4ca3;
+    /* 3-8 */
+    visibility: hidden;
+
+    /* 4-1 */
+    transition: 0.5s;
+}
+
+/* 4 */
+.customer .list:hover:after {
+    width: 100%;
+    height: 100%;
+
+    /* 나오게 하기  */
+    visibility: visible;
+}
+
+
+/* 3-3  */
+.customer .list h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+/* ★애니메이션은 중심부에 따라 감 기준이 어디냐에 따라
+박스가 변하는게 다름 ex) top left되어잇음 위왼으로 길어짐 */
+
+
+/* 5 상단 메뉴 만들기 */
+.customer .nav {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px;
+    height: 100px;
+    margin: 0 auto 50px auto;
+}
+
+/* 5-1 */
+.customer .nav>li {
+    flex: 1;
+}
+
+/* 5-4 메뉴 밑 가상요소 넣기 */
+.customer .nav>li::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 5px;
+    background: #0c4ca3;
+    /* 5-6 */
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+
+/* 5-5 */
+.customer .nav>li:hover:after {
+    width: 100%;
+}
+
+/* 5-3 요소를 가운데오게하는 옛날방식*/
+.customer .nav>li a {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+}
+
+/* 5-2 */
+.customer .nav>li~li {
+    border-left: 1px solid #ddd;
+}

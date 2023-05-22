@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소의 겹침 -position00</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/position00.css">
+
+</head>
+
+<body>
+    <!-- ※ 1~4 css에서 외울 공식 -->
+    <h1 class="tit">position00</h1>
+
+    <h2>position01 - absolute 상하좌우 가운데 배치</h2>
+    <section class="sec case01">
+        <!-- sec = section 줄임 -->
+        <div class="itm">BOX</div>
+    </section>
+
+    <h2>position02 - absolute 꽉채우기</h2>
+    <section class="sec case02">
+        <div class="itm">BOX</div>
+    </section>
+
+    <h2>position03 - absolute 1200line 왼쪽에 맞추기</h2>
+    <section class="sec case03">
+        <div class="itm">BOX</div>
+    </section>
+
+    <h2>position04 - absolute 1200line 오른쪽에 맞추기</h2>
+    <section class="sec case04">
+        <div class="itm">BOX</div>
+    </section>
+
+    <!-- 실습 - 제품 3개 1200라인 맞추고 카트담기 -->
+    <!-- 1 -->
+    <h2>실습예시 01 - hover 카트담기 </h2>
+    <section class="sec event">
+        <!-- inner 바깥전용 / 이름 두번 지어주면서 일이 단단함 -->
+        <div class="inner con">
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona01.jpg" alt="" srcset="">
+                </div>
+                <div class="btn">
+                    <i class="xi-cart"></i>
+                </div>
+            </figure>
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona02.jpg" alt="" srcset="">
+                </div>
+                <div class="btn">
+                    <i class="xi-cart"></i>
+                </div>
+            </figure>
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona03.jpg" alt="" srcset="">
+                </div>
+                <div class="btn">
+                    <i class="xi-cart"></i>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <!-- 2 -->
+    <h2>실습예시 02 -제품 hover 설명나오는 것</h2>
+    <section class="sec content">
+        <div class="inner con">
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona01.jpg" alt="" srcset="">
+                </div>
+                <div class="cover">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam quisquam quaerat
+                        tempora saepe porro. Repellendus adipisci corporis itaque optio.</p>
+
+                    <a href="#!">MORE</a>
+                    <!-- a태그는 원래 연결되는데 #! 눌러도 안움직이는 것 -->
+                </div>
+            </figure>
+
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona02.jpg" alt="" srcset="">
+                </div>
+                <div class="cover">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam quisquam quaerat
+                        tempora saepe porro. Repellendus adipisci corporis itaque optio.</p>
+
+                    <a href="#!">MORE</a>
+                </div>
+            </figure>
+
+            <figure>
+                <div class="box">
+                    <img src="../images/lesedilarona03.jpg" alt="" srcset="">
+                </div>
+                <div class="cover">
+                    <h3>Lorem ipsum dolor sit amet.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsam quisquam quaerat
+                        tempora saepe porro. Repellendus adipisci corporis itaque optio.</p>
+
+                    <a href="#!">MORE</a>
+                </div>
+            </figure>
+        </div>
+    </section>
+    <!-- 3 -->
+    <h2>실습예시 03-kcc건설 애니메이션</h2>
+    <section class="sec customer">
+        <!-- 5 상단 메뉴-->
+        <ul class="nav">
+            <li><a href="">menu</a></li>
+            <li><a href="">menu</a></li>
+            <li><a href="">menu</a></li>
+        </ul>
+
+        <div class="inner">
+            <div class="list">
+                <div class="tit">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, neque!</p>
+                </div>
+                <div class="date">
+                    <strong> 2023.05.22</strong>
+                    <i class="xi-plus"></i>
+                </div>
+            </div>
+            <div class="list">
+                <div class="tit">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, neque!</p>
+                </div>
+                <div class="date">
+                    <strong> 2023.05.22</strong>
+                    <i class="xi-plus"></i>
+                </div>
+            </div>
+            <div class="list">
+                <div class="tit">
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, neque!</p>
+                </div>
+                <div class="date">
+                    <strong> 2023.05.22</strong>
+                    <i class="xi-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
