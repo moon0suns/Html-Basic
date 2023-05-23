@@ -1,0 +1,305 @@
+/* 기본셋팅 ~itm까지 */
+h1.tit {
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 가운데로 박스옮기기 */
+    border: 1px solid #000;
+    background: yellow;
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* 0 */
+.sec {
+    padding: 100px 0;
+}
+
+.bg {
+    background: #f9f9f9;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.sc01 h3 {
+    font-size: 30px;
+    font-weight: 700px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+/* 1-1 가상요소 */
+.sc01 h3::before {
+    content: "앞";
+    margin: 0 100px 0 0;
+}
+
+/* 1-1 가상요소 */
+.sc01 h3::after {
+    content: "뒤";
+}
+
+
+
+
+
+
+/* 2 */
+.sc02 h3 {
+    font-size: 30px;
+    font-weight: 700px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+/* 2-1 상하 줄 긋기 */
+.sc02 h3::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: thistle;
+    margin: 30px auto;
+}
+
+.sc02 h3::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 1px;
+    background: thistle;
+    margin: 30px auto;
+    /* 상하 좌우 박스 가운데 오기 margin 박스와떨어뜨릴때 O
+     마지막 박스는 marginX */
+}
+
+
+/* 3 양쪽 줄긋기*/
+.sc03 h3 {
+    font-size: 30px;
+    font-weight: 700px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.sc03 h3::before {
+    content: "";
+    display: inline-block;
+    /* h3 옆 박스옆에 옴 */
+    vertical-align: 10px;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+    margin: 0 10px;
+}
+
+.sc03 h3::after {
+    content: "";
+    display: inline-block;
+    /* h3 옆 박스옆에 옴 */
+    vertical-align: 10px;
+    width: 100px;
+    height: 1px;
+    background: tomato;
+    margin: 0 10px;
+}
+
+
+
+
+/* 4 양쪽 꽉 채우는 줄 긋기 */
+.sc04 h3 {
+    display: flex;
+    /* 가상요소와 가로배치 */
+    /* justify-content: center;
+    가로축 중앙 */
+    align-items: center;
+    /* 높이 중앙 text 센터랑 다름 */
+    gap: 30px;
+    font-size: 30px;
+    font-weight: 700px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.sc04 h3::before {
+    content: "";
+    /* 소리질러 꽉차는거 */
+    flex: 1;
+    display: block;
+    /* 박스만들기 */
+    height: 1px;
+    background: tomato;
+}
+
+.sc04 h3::after {
+    content: "";
+    /* 소리질러 꽉차는거 */
+    flex: 1;
+    display: block;
+    /* 박스만들기 */
+    height: 1px;
+    background: tomato;
+}
+
+
+
+
+
+/* 5 아이콘 만들기 ★list 한꺼번에 수정하기 좋다 */
+.sc05 .dot {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    line-height: 1.4;
+}
+
+/* 리스트 앞에 점 만들기
+.sc05 .dot>li::before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 2px;
+    background: tomato;
+    점만들기 content에 넣으면 글자패밀리로 속성바뀜
+    vertical-align: middle;
+    글자맞춰서 중앙
+    margin: 0 10px 0 0;
+} */
+
+
+
+/* 5-2 리스트 줄바꿈했을때 줄맞춤할때  */
+.sc05 .dot>li {
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+
+/* 5-1 아이콘 찍는 방법 */
+.sc05 .dot>li::before {
+    content: "\e921";
+    font-family: xeicon;
+    font-size: 3px;
+    color: tomato;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+
+
+
+/* 6 이미지 넣기 */
+.sc06 .img>li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: tomato;
+    background: url(../images/lesedilarona01.jpg) no-repeat center center/cover;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+    vertical-align: middle;
+    /* 글자줄에 맞춰 높이 중앙
+    vertical-align햇을때 line hegiht가 내려가는경우있다? */
+}
+
+
+
+/* 7 스탭 만들기 */
+.sc07 .inner>li::before {
+    content: attr(data-title);
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    background: tomato;
+    color: #fff;
+    padding: 10px;
+    border-radius: 3px;
+
+}
+
+/* 8 라벨 만들기 */
+.sc07 .inner>li::after {
+    content: "new";
+    position: absolute;
+    right: -20px;
+    bottom: 50px;
+    border-top: 10px solid tomato;
+    border-bottom: 10px solid tomato;
+    border-left: 20px solid tomato;
+    border-right: 5px solid transparent;
+    /* transparent 투명하게 */
+    height: 0;
+    width: 60px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+
+    line-height: 0;
+    text-indent: -10px;
+    /* new글자 가운데오게 하기 */
+
+}
+
+/* 7-1 배열 디자인 */
+.sc07 .inner {
+    position: relative;
+    display: grid;
+    /* flex와 다른 grid 속성 (일분코딩 읽기)*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ※반응형 공식 600이하로 가면 박스가 자동 밑으로 내려감
+    / fr 한칸씩 차지해라 */
+    gap: 60px 30px;
+    /* 상하 좌우 / 상하 사이에만 갭 들어감 반응형갔을때 자동 밑으로 
+    내려갈때 갭이 중요한 역할을함 */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 8-1 별모양 */
+.sc07 .inner::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: url(../images/mainvisual01.jpg) no-repeat center center/cover;
+    /* 별안에 이미지 넣기  */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    /* clip path generator에서 좌표가져옴 */
+}
+
+/* 7-2 꾸미기 */
+.sc07 .inner>* {
+    position: relative;
+    border: 1px solid tomato;
+    padding: 30px;
+    background: #f9f9f9;
+}
