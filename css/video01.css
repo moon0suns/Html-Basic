@@ -1,0 +1,150 @@
+/* 0. 기본셋팅 ~itm까지 */
+h1.tit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 50px;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 999;
+    /* 흐름바꿔주기 포지션띄워서 겹치기위해 씀 */
+    color: #fff;
+}
+
+h2 {
+    margin: 50px 0 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    /* 가운데로 박스옮기기 */
+    border: 1px solid #000;
+    background: yellow;
+}
+
+.itm {
+    background: tomato;
+    color: #fff;
+    text-align: center;
+}
+
+.sec {
+    padding: 100px 0;
+
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 2-2 꽉채우기*/
+.main_visual {
+    height: 100vh;
+    /* 100vh; 화면줄여도 동영상 꽉채워짐 */
+    overflow: hidden;
+}
+
+
+/* 2-1 화면에 꽉차게 비디오 넣기 */
+.main_visual video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    /* object-fit: 스케울을 유지한다. 꽉채우기 */
+}
+
+/* 1 */
+.case01 video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /* 길이높이대로 들어오게하기 */
+}
+
+/* 3 가로배치 */
+.case01 .video {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* 3-1 모든자식 플랙스1 반반씩 차지해 */
+.case01 .video>* {
+    flex: 1;
+}
+
+/* 3-5 아이콘끼리 붙이기 */
+.case01 .controll {
+    font-size: 0;
+}
+
+
+/* 3-3 디자인하기 */
+.case01 i {
+    padding: 10px;
+    /* 3-4 inline block이라서 패딩이 사방으로 먹힘 네모만들기
+    그리고 인라인블록이라서 4px떨어져잇다 */
+    background: thistle;
+    color: #fff;
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    /* 3-6 떨어뜨리기 */
+    cursor: pointer;
+}
+
+/* 4-1 */
+.main_visual {
+    position: relative;
+
+}
+
+/* 4 */
+.ctr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: tomato;
+
+    border: none;
+    outline: none;
+
+    outline: 10px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+
+    font-size: 30px;
+    color: #fff;
+
+    /* box-sizing: content-box; */
+}
+
+.ctr::before {
+    content: "\ea3b";
+    /* F12에서 글자넣기 */
+    font-family: xeicon;
+}
+
+.ctr.on::before {
+    content: "\ea3e";
+    /* font-family: xeicon; */
+}

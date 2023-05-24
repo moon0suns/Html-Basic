@@ -201,7 +201,7 @@ h2 {
 
 /* 5-1 아이콘 찍는 방법 */
 .sc05 .dot>li::before {
-    content: "\e921";
+    content: "앞";
     font-family: xeicon;
     font-size: 3px;
     color: tomato;

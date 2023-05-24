@@ -1,0 +1,63 @@
+.ctr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, calc(-50% + 100px));
+    /* calc 계산기 */
+    margin: 0 0 0 -585px;
+}
+
+.ctr i {
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background: tan;
+    margin: 0 5px 0 0;
+}
+
+
+
+
+
+/* 사각형에 동영상 삽입 */
+#main_content {
+    padding: 100px 0;
+
+}
+
+#main_content .inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+#bgm1 {
+    width: 200px;
+    height: 600px;
+    background: tomato;
+}
+
+#bgm2 {
+    width: 100px;
+    height: 400px;
+    background: tomato;
+}
+
+
+#bgm3 {
+    width: 50px;
+    height: 100px;
+    background: tomato;
+}
+
+
+#bgm2 iframe {
+    left: -300px !important;
+}
+
+#bgm3 iframe {
+    left: -400px !important;
+}
