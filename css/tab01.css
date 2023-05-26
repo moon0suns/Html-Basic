@@ -1,0 +1,285 @@
+#tab_block {
+    padding: 100px 0;
+    /* 바깥쪽 박스 공간주기 패딩으로!*/
+
+}
+
+/* 2 반응형 잡기 */
+.inner,
+.tit {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 2-1 */
+#tab_block .tit {
+    margin: 0 auto 30px auto;
+}
+
+/* 2-2 */
+#tab_block .tit h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* 2-9 */
+#tab_block .inner {
+    width: 500px;
+}
+
+/* 2-3 가로배치 */
+.tab_link {
+    /* display: flex; */
+    display: table;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+/* 2-4 디자인 */
+.tab_link>li {
+    /* flex: 1; */
+    /* 탭메뉴 한칸씩 가져서 꽉차게하기 */
+    display: table-cell;
+    background: #333;
+    color: #fff;
+}
+
+/* 2-8 택 사이에 바 들어가기 */
+.tab_link>li~li {
+    border-left: 1px solid #ddd;
+}
+
+/* 2-6 내가 누르는거에 색깔바뀜 */
+.tab_link>li.on {
+    background: tomato;
+}
+
+/* 2-7 li에 안주고 a에 줌 펴주고 넓히는거*/
+.tab_link a {
+    display: block;
+    padding: 10px 20px;
+}
+
+/* 3 */
+.tab_content .con {
+    background: #f9f9f9;
+}
+
+
+
+/* .tab_content .con {
+    display: none;
+    1-1 안보이게함 
+}
+
+1-3 on 붙인거만 나옴
+.tab_content .con.on {
+    display: block;
+} */
+
+/* 3-1   display: none;같은 기능 */
+.tab_content .con {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    /*  visibility: visible;같이 와야하고 높이를 주어야함. */
+}
+
+/* 3-2 나오게함 */
+.tab_content .con.on {
+    visibility: visible;
+    height: auto;
+}
+
+/* https://www.biew.co.kr/entry */
+
+
+/* 해만들기 */
+
+#tab_position {
+    position: relative;
+}
+
+#tab_position .sun {
+    position: absolute;
+    top: -100px;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    animation: sun 5s infinite linear;
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+#tab_position .sun::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    background: tomato;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-100px, -50%);
+}
+
+#tab_position .sun::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    background: tomato;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(70px, -50%);
+}
+
+#tab_position .sun span::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background: tomato;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, 70px);
+}
+
+#tab_position .sun span::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 30px;
+    background: tomato;
+    top: 50%;
+    left: 50%;
+    border-radius: 4px;
+    transform: translate(-50%, -100px);
+}
+
+
+
+
+
+
+
+/* 지도 만들기 실습 */
+
+
+#tab_position .inner {
+    display: flex;
+    /* 양쪽으로 보냄 */
+    align-items: center;
+}
+
+#tab_position .tab_img {
+    position: relative;
+    width: 1000px;
+}
+
+/* 좌표를 주기위해 1000해줌 */
+#tab_position .tab_img img {
+    width: 1000px;
+    height: 1000px;
+    object-fit: cover;
+
+}
+
+.tab_map_location {
+    position: absolute;
+    /* 앱솔로뜨니깐 기준잡기 축양형 */
+    inset: 0 0 0 0;
+}
+
+/* 탭메뉴 만들기 */
+.tab_map_location li {
+    position: absolute;
+    display: none;
+    font-size: 0;
+}
+
+/* 위치잡는 디자인 */
+.tab_map_location li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-right: 10px solid tomato;
+    border-bottom: 10px solid tomato;
+    /* transform: rotate(45deg) translate(0, -10%); */
+    opacity: 0;
+}
+
+
+.tab_map_location li.on::after {
+    animation: arrow 0.5s infinite;
+}
+
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-10%, -10%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-10%, -10%);
+    }
+}
+
+
+
+.tab_map_location li.on {
+    display: block;
+}
+
+.tab_map_location li:nth-child(1) {
+    top: 24%;
+    left: 38%;
+}
+
+.tab_map_location li:nth-child(2) {
+    top: 30%;
+    left: 20%;
+}
+
+.tab_map_location li:nth-child(3) {
+    top: 60%;
+    left: 60%;
+}
+
+.tab_map_location li:nth-child(4) {
+    top: 80%;
+    left: 70%;
+}
+
+.tab_map_location li:nth-child(5) {
+    top: 70%;
+    left: 20%;
+}

@@ -1,0 +1,139 @@
+/* 1-2 */
+#header .gnb>ul>li {
+    position: relative;
+}
+
+/* 1-1 */
+#header .sub {
+    /* 1-5 원래는 포지션뒤에 쓰지만 지금은 디스플레이가 hover중요하니깐 앞에 줌 */
+    display: none;
+
+    position: absolute;
+    top: 80px;
+    /* 높이보다 많이 주면 안됨 */
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 999;
+
+    /* 1-3 heml에서 a사이에 메뉴ul넣고오기*/
+    background: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 120px;
+    line-height: 40px;
+}
+
+/* 1-6 */
+#header .gnb>ul>li:hover .sub {
+    display: block;
+}
+
+/* 1-4 */
+#header .sub>li~li {
+    border-top: 1px solid #ddd;
+}
+
+.mopen {
+    display: none;
+
+
+}
+
+
+
+
+
+
+/* ▼ 모바일 반응형 :줄이면 메뉴가 없어짐 */
+
+
+@media (max-width: 768px) {
+
+    .mopen {
+        display: block;
+
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        z-index: 999;
+
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .mopen i {
+        font-size: 20px;
+        padding: 5px;
+        background: #f7f7f7;
+        border-radius: 3px;
+
+    }
+
+    #header.on h1 {
+        position: fixed;
+        padding: 0 15px;
+        z-index: 1000;
+    }
+
+    #header .gnb>ul>li>a {
+        line-height: 40px;
+        border-bottom: 1px solid blue;
+        background: #ddd;
+    }
+
+    #header .gnb {
+        /* display: none; */
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background: #fff;
+        width: calc(100% - 90px);
+        height: 100vh;
+        z-index: 999;
+
+        padding: 100px 30px;
+    }
+
+    #header .gnb.on {
+        left: 0;
+    }
+
+    #header .gnb>ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #header .gnb>ul>li {
+        position: relative;
+    }
+
+
+    #header .sub {
+        display: none;
+
+        position: static;
+        /* top: 80px;
+        left: 50%; */
+        transform: translate(0, 0);
+        /* z-index: 999; */
+
+        /* background: #fff; */
+        border: none;
+        text-align: left;
+        width: auto;
+        line-height: 40px;
+    }
+
+    #header .gnb>ul>li:hover .sub {
+        display: none;
+    }
+
+    #header .gnb>ul>li.on .sub {
+        display: block;
+    }
+
+    #header .sub>li~li {
+        border-top: 1px solid #ddd;
+    }
+
+}
