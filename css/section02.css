@@ -1,0 +1,140 @@
+* {
+    outline: 1px solid #ddd;
+}
+
+body {
+    color: #444;
+    line-height: 1;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section .tit {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 15px;
+}
+
+
+.section .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* 마지막 박스니깐 마진 안주고 tit에 마진을 줌 */
+.section .tit p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+/* 💕 */
+/* 기본적으로 플렉스는 스트레치된다 */
+#mainContent .inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mainContent .inner figure {
+    flex: 1 0 50%;
+    /* 1한칸씩 0늘어나지않는다 50% 기본사이즈 */
+    /* 50% ->반응형될때 400px아래로 떨어지면 한칸씩 px만 바꿔줘도 반응형됨 */
+}
+
+/* @media (max-width:768px) {
+    #mainContent .inner {
+        flex-direction: column;
+    }
+
+    #mainContent .inner figure:nth-child(2) {
+        order: -1;
+    }
+} */
+
+#mainContent .inner figure:nth-child(2) {
+    border: 1px solid tomato;
+}
+
+
+
+
+
+
+
+
+/* 💕 */
+#mainContent2 .inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    /* @media 안쓰고 반응형 만드는 방법 */
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+}
+
+#mainContent2 .inner figure:nth-child(2) {
+    border: 1px solid tomato;
+}
+
+@media (max-width:768px) {
+    #mainContent2 .inner {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+/* 💕 */
+/* 가둬높고 높이 푸터떨어지기 */
+/* #mainContent3 .inner::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+#mainContent3 .inner figure {
+    float: left;
+    width: 50%;
+    /* 100%에서 등분할 숫자대로 나누기 3개하면 33% */
+    height: 272px;
+}
+
+#mainContent3 .inner figure:nth-child(2) {
+    border: 1px solid tomato;
+}

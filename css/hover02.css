@@ -1,0 +1,69 @@
+* {
+    /* outline: 1px solid #ddd; */
+}
+
+.tit {
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+#header .service i {
+    position: relative;
+    font-size: 20px;
+
+}
+
+
+#header .service i small {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: rgb(92, 76, 73);
+    color: #fff;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+
+
+#hover01 .inner {
+    display: grid;
+    /* 기본적으로 스트레치라서 flex하는것보다 p글자가 많아져도 박스사이즈 맞춰줌 */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 30px;
+}
+
+/* 📌 */
+#hover01 .img_box {
+    position: relative;
+    margin: 0 0 20px 0;
+}
+
+#hover01 .img_box .lnk {
+    position: absolute;
+    inset: 0 0 0 0;
+    /* 다펴주는 기능 */
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    /* 자세히보기 - 글자없애기 */
+}
+
+
+#hover01 .img_box:hover .lnk {
+    background: linear-gradient(to bottom, rgba(158, 86, 72, 0.5) 40%, transparent 60%);
+    visibility: visible;
+    /* 호버햇을때 - 글자살리기 */
+}
+
+#hover01 .itm strong {
+    display: block;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+}

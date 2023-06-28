@@ -1,0 +1,109 @@
+* {
+    outline: 1px solid #ddd;
+}
+
+body {
+    color: #444;
+    line-height: 1;
+}
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section .tit {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 15px;
+}
+
+
+.section .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+/* 마지막 박스니깐 마진 안주고 tit에 마진을 줌 */
+.section .tit p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+#mainContent .inner {
+    display: flex;
+    /* figure에 flex 1 한세트 */
+    gap: 30px;
+}
+
+
+#mainContent .inner figure {
+    flex: 1;
+
+    /* overflow: hidden;
+    min-height: 0;
+    📌슬라이드 들어갔을때 늘어날 경우 대처 */
+}
+
+
+/* 첫번째 이미지 두칸 차지하게 쓰일경우 쓰기
+#mainContent .inner figure:nth-child(1) {
+    flex: 2;
+} */
+
+
+
+
+/* 💕grid - flex1 안잡고 grid로 가로배치 쓰는방법*/
+
+#mainContent2 .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+
+
+/*💕float */
+
+#mainContent3 .inner {
+    padding: 0 0;
+    /* overflow: hidden; */
+    /* 다단메뉴할때 겹치기때문에 오벌히드줘야함 */
+}
+
+/* 박스높이 해결 */
+/* #mainContent3 .inner::after {
+    content: "";
+    display: block;
+    clear: both;
+} */
+
+#mainContent3 .inner figure {
+    float: left;
+    width: 33.333333%;
+    padding: 0 15px;
+}

@@ -60,14 +60,13 @@
 .tab_link a {
     display: block;
     padding: 10px 20px;
+
 }
 
 /* 3 */
 .tab_content .con {
     background: #f9f9f9;
 }
-
-
 
 /* .tab_content .con {
     display: none;
